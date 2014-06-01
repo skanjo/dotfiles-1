@@ -1,0 +1,22 @@
+# Completetion
+completions=$(cat <<COMPLETIONS
+`brew --prefix`/etc/bash_completion.d/git-completion.bash
+`brew --prefix`/etc/bash_completion
+`brew --prefix`/Library/Contributions/brew_bash_completion.sh
+$HOME/d/django/extras/django_bash_completion
+$HOME/.ghar/ghar-bash-completion.sh
+COMPLETIONS)
+
+for c in $completions; do
+    test -r $c && source $c
+done
+
+which -s pip && eval "`pip completion --bash`"
+
+# Via https://github.com/mathiasbynens/dotfiles/blob/master/.bash_profile:
+# Add tab completion for `defaults read|write NSGlobalDomain`
+# You could just use `-g` instead, but I like being explicit
+complete -W "NSGlobalDomain" defaults
+
+# Add `killall` tab completion for common apps
+complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
