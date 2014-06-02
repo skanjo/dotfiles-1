@@ -4,7 +4,7 @@ completions=$(cat <<COMPLETIONS
 `brew --prefix`/etc/bash_completion
 `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 $HOME/d/django/extras/django_bash_completion
-$HOME/.ghar/ghar-bash-completion.sh
+$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash
 COMPLETIONS)
 
 for c in $completions; do
