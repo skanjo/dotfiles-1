@@ -1,7 +1,7 @@
-# Versions
-tap homebrew/versions
+update
+upgrade
 
-# Now all the awesome stuff. Unfortunately the order here kinda matters
+# nfortunately the order here kinda matters
 # because of how things build. Ick. So, prereqs:
 install coreutils
 install sqlite
@@ -31,7 +31,6 @@ install mercurial
 install go
 install mtr
 install nmap
-install princexml
 install pypy
 install python --with-brewed-openssl
 install python3 --with-brewed-openssl
@@ -54,32 +53,36 @@ install zeromq
 
 # Brew casks
 tap caskroom/cask
-tap caskroom/homebrew-versions
+tap caskroom/versions
 install brew-cask
 
-cask install adium
-cask install arq
-cask install caffeine
-cask install charles
-cask install coconutbattery
-cask install dropbox
-cask install evernote
-cask install firefox
-cask install gitx-l
-cask install google-chrome
-cask install google-drive
-cask install gpgtools
-cask install hipchat
-cask install iterm2
-cask install mailplane
-cask install pandoc
-cask install postgres
-cask install quicksilver
-cask install rdio
-cask install skype
-cask install slate
-cask install sonos
-cask install sublime-text3
-cask install transmission
-cask install usb-overdrive
-cask install vlc
+# *sigh* cask install fails if things are already installed
+# https://github.com/caskroom/homebrew-cask/issues/4785
+cask install adium || true
+cask install arq || true
+cask install charles || true
+cask install coconutbattery || true
+cask install dropbox || true
+cask install evernote || true
+cask install firefox || true
+cask install gitx-l || true
+cask install google-chrome || true
+cask install google-drive || true
+cask install gpgtools || true
+cask install hipchat || true
+cask install iterm2 || true
+cask install mailplane || true
+cask install pandoc || true
+cask install postgres || true
+cask install quicksilver || true
+cask install rdio || true
+cask install skype || true
+cask install slate || true
+cask install sonos || true
+cask install sublime-text3 || true
+cask install transmission || true
+cask install usb-overdrive || true
+cask install vlc || true
+
+cleanup
+doctor
