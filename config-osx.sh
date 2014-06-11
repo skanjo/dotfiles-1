@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# config osx - originally from http://mths.be/osx
+# ~/.osx — originally from http://mths.be/osx
 
 # Ask for the administrator password upfront
 sudo -v
