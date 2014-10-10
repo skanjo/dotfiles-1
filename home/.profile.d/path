@@ -1,9 +1,19 @@
-# Prepend to path
+# Coretuils
 if [ `brew list | grep coreutils` ]; then
     export PATH=`brew --prefix coreutils`:$PATH
 fi
+
+# Postgres
 export PATH=/opt/homebrew-cask/Caskroom/postgres/latest/Postgres.app/Contents/MacOS/bin:$PATH
+
+# Local stuff
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:$PATH
 
-# Append to path
-export PATH=$PATH:~/.ghar/bin:/opt/pdflabs/pdftk/bin:/usr/local/share/npm/bin:/usr/local/opt/ruby193/bin
+# NPM
+export PATH=$PATH:/usr/local/share/npm/bin
+
+# Ruby/homebrew
+export PATH=$PATH:/usr/local/opt/ruby193/bin
+
+# pipsi - https://github.com/mitsuhiko/pipsi
+export PATH=~/.local/bin:$PATH
