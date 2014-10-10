@@ -1,5 +1,5 @@
 alias git=hub
-alias h=hk
+alias h=heroku
 alias ls='ls -F'
 alias pph='export PYTHONPATH=`pwd`'
 alias py="ipython"
