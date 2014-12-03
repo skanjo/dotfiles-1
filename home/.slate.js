@@ -57,6 +57,28 @@ slate.bindAll({
 });
 
 //
+// vertical bars - 1/4 top to bottom
+//
+var vbar = function(n, screen) {
+    var op = {
+        "x": "screenOriginX",
+        "y": "screenSizeY*" + (n-1) + "/4",
+        "width": "screenSizeX",
+        "height": "screenSizeY/4"
+    };
+    if (screen) {
+        op.screen = screen;
+    }
+    return slate.op("move", op);
+};
+slate.bindAll({
+    "1:alt;space": vbar(1),
+    "2:alt;space": vbar(2),
+    "3:alt;space": vbar(3),
+    "4:alt;space": vbar(4),
+});
+
+//
 // centering and full screen
 // "c": center with a 1/8th margin
 // "f": full screen
@@ -83,25 +105,11 @@ var leftScreenRef = "1440x2560";
 
 var dualMonitorLayout = slate.layout("dualMonitor", {
 	"HipChat": {
-		"operations": [
-			slate.operation("push", {
-				"direction": "top",
-				"style": "bar-resize:screenSizeY/4",
-				"screen": leftScreenRef,
-			})
-		],
+		"operations": [vbar(1, leftScreenRef)],
 		"ignore-fail": true,
 	},
 	"LimeChat": {
-		"operations": [
-			slate.operation("move", {
-				"x": "screenOriginX",
-				"y": "screenSizeY*1/4",
-				"width": "screenSizeX",
-				"height": "screenSizeY/4",
-				"screen": leftScreenRef
-			})
-		],
+		"operations": [vbar(2, leftScreenRef)],
 		"ignore-fail": true,
 	},
 	"Google Chrome": {
