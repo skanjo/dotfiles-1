@@ -4,7 +4,7 @@ if [ `brew list | grep coreutils` ]; then
 fi
 
 # Postgres
-export PATH=/opt/homebrew-cask/Caskroom/postgres/latest/Postgres.app/Contents/MacOS/bin:$PATH
+export PATH=$PATH:~/Applications/Postgres.app/Contents/Versions/9.3/bin
 
 # Local stuff
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:$PATH
@@ -12,8 +12,9 @@ export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:$PATH
 # NPM
 export PATH=$PATH:/usr/local/share/npm/bin
 
-# Ruby/homebrew
-export PATH=$PATH:/usr/local/opt/ruby193/bin
+# Ruby
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
 
 # pipsi - https://github.com/mitsuhiko/pipsi
 export PATH=~/.local/bin:$PATH
