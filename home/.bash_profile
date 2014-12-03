@@ -6,6 +6,7 @@ source ~/.profile.d/aliases
 source ~/.profile.d/completion
 source ~/.profile.d/python
 source ~/.profile.d/prompt
+source ~/.profile.d/gpg-agent
 test -r ~/.profile.private && source ~/.profile.private
 
 # Shell opts
