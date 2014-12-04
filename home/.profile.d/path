@@ -12,9 +12,8 @@ export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:$PATH
 # NPM
 export PATH=$PATH:/usr/local/share/npm/bin
 
-# Ruby
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
+# Ruby - chruby
+source /usr/local/share/chruby/chruby.sh
 
 # pipsi - https://github.com/mitsuhiko/pipsi
 export PATH=~/.local/bin:$PATH
