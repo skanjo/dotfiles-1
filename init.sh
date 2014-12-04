@@ -17,5 +17,7 @@ $HOME/.homesick/repos/dotfiles/setup-dropbox-links.sh
 # install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# All the homebrew things
-brew bundle $HOME/.homesick/repos/dotfiles/Brewfile
+# install lots of things!
+$HOME/.homesick/repos/dotfiles/brew.sh
+$HOME/.homesick/repos/dotfiles/ruby.sh
+$HOME/.homesick/repos/dotfiles/python.sh
