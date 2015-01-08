@@ -4,7 +4,7 @@ if [ `brew list | grep coreutils` ]; then
 fi
 
 # Postgres
-export PATH=$PATH:~/Applications/Postgres.app/Contents/Versions/9.3/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 
 # Local stuff
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:$PATH
@@ -14,6 +14,7 @@ export PATH=$PATH:/usr/local/share/npm/bin
 
 # Ruby - chruby
 source /usr/local/share/chruby/chruby.sh
+chruby 2.1
 
 # pipsi - https://github.com/mitsuhiko/pipsi
 export PATH=~/.local/bin:$PATH
