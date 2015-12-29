@@ -23,5 +23,9 @@ function pyg() {
     pbpaste | pygmentize -f rtf -O "style=friendly,fontface=Source Code Pro" "$1" | pbcopy
 }
 
+function code () {
+    VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;
+}
+
 # homeshick
 source $HOME/.homesick/repos/homeshick/homeshick.sh

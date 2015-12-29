@@ -108,10 +108,14 @@ var dualMonitorLayout = slate.layout("dualMonitor", {
 		"operations": [vbar(1, leftScreenRef)],
 		"ignore-fail": true,
 	},
-	"LimeChat": {
+	"Nimbus": {
 		"operations": [vbar(2, leftScreenRef)],
 		"ignore-fail": true,
 	},
+    "Slack": {
+        "operations": [vbar(3, leftScreenRef)],
+        "ignore-fail": true,
+    },
 	"Google Chrome": {
 		"operations": [quarter("bottom-left", mainScreenRef)],
 		"repeat": true,
