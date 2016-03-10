@@ -45,3 +45,6 @@ brew cask install crashplan \
 brew cask install font-source-code-pro \
                   font-source-sans-pro \
                   font-source-serif-pro
+
+# services
+brew tap homebrew/services
