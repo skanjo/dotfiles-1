@@ -104,7 +104,7 @@ var leftScreenRef = "1440x2560";
 // var laptopScreenRef = xxxfixme;
 
 var dualMonitorLayout = slate.layout("dualMonitor", {
-	"HipChat": {
+	"Slack": {
 		"operations": [vbar(1, leftScreenRef)],
 		"ignore-fail": true,
 	},
@@ -112,10 +112,6 @@ var dualMonitorLayout = slate.layout("dualMonitor", {
 		"operations": [vbar(2, leftScreenRef)],
 		"ignore-fail": true,
 	},
-    "Slack": {
-        "operations": [vbar(3, leftScreenRef)],
-        "ignore-fail": true,
-    },
 	"Google Chrome": {
 		"operations": [quarter("bottom-left", mainScreenRef)],
 		"repeat": true,
@@ -131,10 +127,11 @@ var dualMonitorLayout = slate.layout("dualMonitor", {
 		"repeat": true,
 		"ignore-fail": true
 	},
-	"Mailplane 3": {
-		"operations": [quarter("bottom-right", mainScreenRef)],
-		"ignore-fail": true,
-	}
+    "Dash": {
+        "operations": [half("bottom", leftScreenRef)],
+        "repeat": true,
+        "ignore-fail": true
+    }
 });
 
 slate.bind("padEnter:ctrl", slate.operation("layout", {"name": dualMonitorLayout}));
