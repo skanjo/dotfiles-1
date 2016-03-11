@@ -3,8 +3,8 @@
 
 brew tap cloudfoundry/homebrew-tap
 brew install cf-cli
+pipsi install groupthink
+groupthink install 18f
 
 # https://playbook.cio.gov/designstandards/visual-style/#typefaces
 brew cask install font-merriweather font-source-sans-pro
-
-
