@@ -117,7 +117,7 @@ var dualMonitorLayout = slate.layout("dualMonitor", {
 		"repeat": true,
 		"ignore-fail": true
 	},
-	"iTerm": {
+	"iTerm2": {
 		"operations": [quarter("top-left", mainScreenRef)],
 		"repeat": true,
 		"ignore-fail": true

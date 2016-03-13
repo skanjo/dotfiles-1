@@ -22,7 +22,7 @@
 [push]
 	default = simple
 [core]
-	excludesfile = /Users/jacob/.gitignore_global
+	excludesfile = ~/.gitignore_global
     pager = less -F -X
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
