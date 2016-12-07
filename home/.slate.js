@@ -105,11 +105,11 @@ var leftScreenRef = "1440x2560";
 
 var dualMonitorLayout = slate.layout("dualMonitor", {
 	"Slack": {
-		"operations": [vbar(1, leftScreenRef)],
+		"operations": [half("top", leftScreenRef)],
 		"ignore-fail": true,
 	},
 	"Nimbus": {
-		"operations": [vbar(2, leftScreenRef)],
+		"operations": [vbar(3, leftScreenRef)],
 		"ignore-fail": true,
 	},
 	"Google Chrome": {
