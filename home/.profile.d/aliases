@@ -1,13 +1,15 @@
+# Aliases and functions
+
 alias git=hub
-alias h=heroku
-alias ls='ls -F'
-alias pph='export PYTHONPATH=`pwd`'
-alias py="ipython"
-alias rcp="rsync -aP"
-alias s="screen -D -R"
-alias cdbrew="cd $(brew --prefix)"
-alias cdcask="cd $(brew --prefix)/Library/Taps/phinze-cask/Casks"
-alias lpc="lpass show --clip --password -G"
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
 
 # source a .env file's info into the current shell.
 function senv() {
@@ -17,8 +19,6 @@ function senv() {
   source .env
   eval "$allexport"
 }
-
-alias fixcam="sudo pkill AppleCameraAssistant"
 
 function pyg() {
     pbpaste | pygmentize -f rtf -O "style=friendly,fontface=Source Code Pro" "$1" | pbcopy
