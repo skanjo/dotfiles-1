@@ -14,4 +14,3 @@ shopt -s cdspell
 shopt -s extglob
 shopt -s histappend
 shopt -s nocaseglob
-setterm -blength 0
