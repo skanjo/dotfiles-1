@@ -24,6 +24,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
     pager = less -F -X
+	hooksPath = /Users/jacobkaplan-moss/.git-support/hooks
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -34,3 +35,9 @@
 	protocol = https
 [credential]
 	helper = osxkeychain
+[gitseekret]
+	version = 1
+	rulesenabled = aws.secret_access_key,aws.access_key_id,aws.account_id,mandrill.api_key,mandrill.username,mandrill.password,newrelic.license_key,slack.api_token
+	exceptionsfile = ""
+[gitseekret]
+	rulespath = /Users/jacobkaplan-moss/.git-support/seekret-rules

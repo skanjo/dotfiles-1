@@ -1,9 +1,5 @@
-# Use virtualenv and pip to maximum effect
+export PYENV_ROOT="$HOME/.pyenv"
 
-if [ `which virtualenvwrapper_lazy.sh`  ]; then
-    export VIRTUAL_ENV_DISABLE_PROMPT=1
-    export WORKON_HOME=$HOME/.virtualenvs
-    export PIP_VIRTUALENV_BASE=$WORKON_HOME
-    export PROJECT_HOME=$HOME/c
-    source `which virtualenvwrapper_lazy.sh`
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
 fi

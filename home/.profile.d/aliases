@@ -1,13 +1,11 @@
 alias git=hub
-alias h=heroku
 alias ls='ls -F'
 alias pph='export PYTHONPATH=`pwd`'
 alias py="ipython"
 alias rcp="rsync -aP"
-alias s="screen -D -R"
 alias cdbrew="cd $(brew --prefix)"
 alias cdcask="cd $(brew --prefix)/Library/Taps/phinze-cask/Casks"
-alias lpc="lpass show --clip --password -G"
+alias fixcam="sudo pkill VDCAssistant"
 
 # source a .env file's info into the current shell.
 function senv() {

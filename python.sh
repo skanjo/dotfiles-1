@@ -1,13 +1,24 @@
 # set up python
+# see https://medium.com/@henriquebastos/the-definitive-guide-to-setup-my-python-workspace-628d68552e14
 
-brew install python --with-brewed-openssl
-brew install python3 --with-brewed-openssl
+# XXX do something different on WSL!
 
-pip install --upgrade pip setuptools
-pip3 install --upgrade pip setuptools
+brew install pyenv
+brew install pyenv-virtualenv
+brew intsall pyenv-virtualenvwrapper
 
-pip install virtualenv virtualenvwrapper
+pyenv install 3.6.1
+pyenv install 2.7.13
 
-curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
-pipsi install lice
-pipsi install pygments
+# XXX does this work? or does it need to be run manuall?
+ pyenv activate jupyter3
+ pip install jupyter
+ python -m ipykernel install --user
+ pyenv deactivate
+
+ pyenv activate ipython2
+ pip install ipykernel
+ python -m ipykernel install --user
+ pyenv deactivate
+ 
+ pyenv global 3.6.1 2.7.13 jupyter3 ipython2

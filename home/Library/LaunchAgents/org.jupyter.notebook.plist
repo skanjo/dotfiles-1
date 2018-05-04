@@ -8,7 +8,7 @@
     <string>org.jupyter.notebook</string>
     <key>ProgramArguments</key>
     <array>
-      <string>/usr/local/bin/jupyter-notebook</string>
+      <string>/Users/jacobkaplan-moss/.pyenv/shims/jupyter-notebook</string>
       <string>--no-browser</string>
       <string>--port</string>
       <string>8888</string>
